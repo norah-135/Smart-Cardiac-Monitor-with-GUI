@@ -1,13 +1,13 @@
 
 
-#define WIFI_SSID "Lama's iPhone (2)"
-#define WIFI_PASSWORD "28062005"
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
 
 
 #define BLYNK_PRINT Serial
 #include <WiFiS3.h>
 #include <BlynkSimpleWifi.h>
-char auth[] = "AASEHCJHqLbwy-NXXlC2d8yesmP9vgXr";  
+char auth[] = "";  
 
 WidgetLED led_normal(V1);
 WidgetLED led_alarm(V2);   
@@ -29,7 +29,7 @@ void setup() {
 
   Serial.println("Connecting to Wifi...");
 
-  Blynk.begin(auth, WIFI_SSID, WIFI_PASSWORD, IPAddress(161, 8, 88, 105), 8080);
+  Blynk.begin(auth, WIFI_SSID, WIFI_PASSWORD, IPAddress(xxx, x, xx, xxx), 8080);
 
   Serial.println("Connected :)");
 }
@@ -122,4 +122,5 @@ void read_heart_rate() {
     index++;
     index %= samp_siz;  
   }
+
 }
